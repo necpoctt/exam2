@@ -18,7 +18,7 @@ const Back = styled('div')({
   position: 'fixed',
   width: '100%',
   zIndex: 2,
-  backgroundColor: color.bgDark,
+  backgroundColor: color.bgDarkDefault,
   top: 0,
   left: 0,
   paddingTop: 25,
