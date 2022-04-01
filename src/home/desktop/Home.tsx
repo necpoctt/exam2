@@ -35,7 +35,7 @@ const marks = [
 ];
 
 const Container = styled('div')({
-  padding: '64px 134px',
+  padding: '64px 132px 64px 213px',
   flex: '1 1 0%',
   '& > h5,& > h3, & > h6': {
     color: color.white,
@@ -70,7 +70,7 @@ const ResultRow = styled('div')({
   color: color.white,
   display: 'flex',
   alignItems: 'end',
-  marginTop: 20,
+  marginTop: 16,
 });
 
 const ButtonContainer = styled('div')({
@@ -97,6 +97,7 @@ const ResultNum = styled(Typography)({
   fontStyle: 'normal',
   fontSize: '48px',
   lineHeight: '150%',
+  fontWeight: 700,
 });
 
 const valuetext = (value: number) => `${value}`;
@@ -134,7 +135,7 @@ const Home = () => {
         placeholder="Keyword"
       />
       <hr />
-      <ResultOfPage variant="h5"># of results per page</ResultOfPage>
+      <ResultOfPage variant="h5"># Of Results Per Page</ResultOfPage>
 
       <ResultRow>
         <ResultNum variant="h3">{result}</ResultNum>

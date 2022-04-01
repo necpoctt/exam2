@@ -45,7 +45,6 @@ const Title = styled('div')({
 });
 
 const Search = styled(Typography)({
-  marginTop: '27px',
   marginBottom: '20px',
   fontFamily: 'Ubuntu',
   fontStyle: 'normal',
@@ -71,7 +70,7 @@ const Results = styled(Typography)({
 });
 
 const Line = styled('hr')({
-  marginTop: '32%',
+  marginTop: '62%',
   flexShrink: 0,
   borderWidth: '0px 0px thin',
   borderStyle: 'solid',
@@ -83,13 +82,15 @@ const ResultNum = styled(Typography)({
   fontStyle: 'normal',
   fontSize: '48px',
   lineHeight: '150%',
+  fontWeight: 700,
 });
 
 const ResultRow = styled('div')({
   color: color.white,
   display: 'flex',
   alignItems: 'end',
-  marginTop: '16px',
+  marginTop: '14px',
+  marginBottom: '-2px',
 });
 
 const ButtonContainer = styled('div')({
@@ -106,6 +107,7 @@ const BottomButton = styled(Button)({
   backgroundColor: color.white,
   color: color.bgDarkDefault,
   width: '100%',
+  fontWeight: 700,
 });
 
 const marks = [
@@ -176,12 +178,15 @@ const Home = () => {
               maxLength={200}
               placeholder="Keyword"
             />
-            <ResultsPerPage variant="h5"># of results per page</ResultsPerPage>
+            <ResultsPerPage variant="h5"># Of Results Per Page</ResultsPerPage>
             <ResultRow>
               <ResultNum variant="h3">{result}</ResultNum>
-              <Results variant="h6">results</Results>
+              <Results variant="h6">result</Results>
             </ResultRow>
             <Slider
+              sx={{
+                height: 'unset',
+              }}
               aria-label="Temperature range"
               value={result}
               getAriaValueText={valuetext}

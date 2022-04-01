@@ -21,14 +21,14 @@ const Back = styled('div')({
   backgroundColor: color.bgDarkDefault,
   top: 0,
   left: 0,
-  paddingTop: 25,
+  paddingTop: 23,
   paddingLeft: 20,
   '& > h5': {
     display: 'flex',
     color: color.white,
     fontFamily: 'Ubuntu',
     fontStyle: 'normal',
-    fontSize: '30px',
+    fontSize: '24px',
     lineHeight: '150%',
     '& > img': {
       marginRight: 25,
@@ -43,7 +43,7 @@ const List = styled('div')({
 });
 
 const Title = styled(Typography)({
-  marginTop: '64px',
+  marginTop: '66px',
   marginBottom: '20px',
   fontFamily: 'Ubuntu',
   fontStyle: 'normal',

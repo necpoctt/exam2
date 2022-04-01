@@ -4,7 +4,7 @@ import Skeleton from '@mui/material/Skeleton';
 import color from '../../../common/color';
 
 const HeadPaper = styled(Paper)({
-  backgroundColor: 'rgb(27, 27, 27)',
+  backgroundColor: 'rgba(255,255,255,6%)',
   color: color.white,
   height: 122,
   width: 130,
@@ -19,6 +19,11 @@ const PaperName = styled('div')({
   boxSizing: 'border-box',
   borderRadius: '8px',
   padding: 4,
+  fontFamily: 'Ubuntu',
+  fontStyle: 'normal',
+  fontWeight: 700,
+  fontSize: '24px',
+  lineHeight: '150%',
 });
 
 const Item = styled('div')({

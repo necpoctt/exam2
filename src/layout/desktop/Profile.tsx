@@ -13,9 +13,10 @@ const Container = styled('div')({
 });
 
 const CssTabs = styled(Tabs)({
-  marginTop: '32px',
+  marginTop: '28px',
   '& .MuiTabs-indicator': {
     backgroundColor: color.white,
+    bottom: '2px',
   },
 });
 
@@ -39,7 +40,7 @@ const CssTab = styled(Tab)({
 });
 
 const List = styled('div')({
-  marginTop: 27,
+  marginTop: 26,
   width: '100%',
   height: 'calc(100vh - 110px)',
 });

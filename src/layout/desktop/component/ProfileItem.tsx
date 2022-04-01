@@ -47,7 +47,7 @@ const ImgContainer = styled('div')({
   width: 40,
   height: 40,
   marginRight: 15,
-  marginLeft: 8,
+  marginLeft: 10,
   '& > img': {
     width: '100%',
     height: '100%',

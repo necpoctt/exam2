@@ -6,8 +6,7 @@ import TagService from '../../service/TagService';
 import TagsItem from './component/TagsItem';
 
 const Container = styled('div')({
-  padding: '64px 134px',
-  paddingLeft: 257,
+  padding: '84px 240px 64px 338px',
   '& > h5': {
     color: color.white,
   },

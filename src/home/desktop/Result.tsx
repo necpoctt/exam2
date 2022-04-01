@@ -9,7 +9,7 @@ import ResultList from './component/ResultList';
 import color from '../../common/color';
 
 const Container = styled('div')({
-  padding: '64px 134px',
+  padding: '92px 114px 64px 213px',
   flex: '1 1 0%',
   '& > h5': {
     color: color.white,
@@ -74,7 +74,7 @@ const Result = () => {
         }}
       >
         <img src={back} alt="back" />
-        Result
+        Results
       </Search>
       <div
         style={{

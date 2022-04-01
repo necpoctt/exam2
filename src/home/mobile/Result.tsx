@@ -22,7 +22,7 @@ const Back = styled('div')({
   backgroundColor: color.bgDarkDefault,
   top: 0,
   left: 0,
-  paddingTop: 25,
+  paddingTop: 23,
   paddingLeft: 20,
   '& > h5': {
     display: 'flex',
@@ -86,7 +86,7 @@ const Result = () => {
           Home Page
         </Typography>
       </Back>
-      <Title variant="h5">Result</Title>
+      <Title variant="h5">Results</Title>
       <div
         style={{
           height: 'calc(100vh - 144px)',

@@ -19,6 +19,7 @@ const BoxContainer = styled(Box)({
   display: 'flex',
   height: 66,
   boxShadow: 'inset 0px 0.5px 0px rgba(0, 0, 0, 0.8)',
+  backgroundColor: 'rgba(24, 24, 24, 0.2)',
 });
 
 const LeftIcon = styled('a')({

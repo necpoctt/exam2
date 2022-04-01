@@ -19,9 +19,14 @@ const Container = styled('div')({
   backgroundColor: color.bgDarkLight,
   borderRight: '1px solid rgba(0, 0, 0, 0.2)',
   zIndex: 2,
-  '& > div': {
-    paddingTop: 20,
-  },
+});
+
+const Logo = styled('div')({
+  paddingTop: 20,
+});
+
+const NavItemContainer = styled('div')({
+  paddingTop: 30,
 });
 
 const NavBar = () => {
@@ -41,10 +46,10 @@ const NavBar = () => {
   return (
     <>
       <Container>
-        <div>
+        <Logo>
           <img src={logo} alt="logo" />
-        </div>
-        <div>
+        </Logo>
+        <NavItemContainer>
           <NavBarItem
             title="Home"
             isSelected={!!nowPath.match('/home')}
@@ -56,7 +61,7 @@ const NavBar = () => {
             isSelected={!!nowPath.match('/tags')}
             onClick={() => navigate('/tags')}
           />
-        </div>
+        </NavItemContainer>
       </Container>
       <Outlet />
     </>
