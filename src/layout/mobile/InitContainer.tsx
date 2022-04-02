@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { styled } from '@mui/material/styles';
-import { Outlet, useNavigate } from 'react-router-dom';
+import { Outlet, useNavigate, useLocation } from 'react-router-dom';
 
 const MobileContainer = styled('div')({
   position: 'fixed',
@@ -12,8 +12,12 @@ const MobileContainer = styled('div')({
 const InitContainer = () => {
   const navigate = useNavigate();
 
+  const { pathname } = useLocation();
+
   useEffect(() => {
-    navigate('/home');
+    if (pathname === '/') {
+      navigate('/home');
+    }
   }, []);
 
   return (

@@ -6,7 +6,7 @@ import TagService from '../../service/TagService';
 import TagsItem from './component/TagsItem';
 
 const Container = styled('div')({
-  padding: '84px 240px 64px 338px',
+  padding: '86px 240px 64px 338px',
   '& > h5': {
     color: color.white,
   },
@@ -14,7 +14,7 @@ const Container = styled('div')({
 
 const Title = styled(Typography)({
   display: 'flex',
-  marginBottom: '20px',
+  marginBottom: '22px',
   position: 'relative',
   cursor: 'pointer',
   fontFamily: 'Ubuntu',

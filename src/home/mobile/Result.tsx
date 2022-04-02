@@ -8,7 +8,7 @@ import ResultList from './component/ResultList';
 import color from '../../common/color';
 
 const Container = styled('div')({
-  padding: '25px 20px 0px 20px',
+  padding: '25px 18px 0px 20px',
   width: '100%',
   '& > h5': {
     color: color.white,
@@ -32,14 +32,14 @@ const Back = styled('div')({
     fontSize: '24px',
     lineHeight: '150%',
     '& > img': {
-      marginRight: 25,
+      marginRight: 14,
     },
   },
 });
 
 const Title = styled(Typography)({
-  marginTop: '64px',
-  marginBottom: '20px',
+  marginTop: '70px',
+  marginBottom: '22px',
   fontFamily: 'Ubuntu',
   fontStyle: 'normal',
   fontSize: '24px',

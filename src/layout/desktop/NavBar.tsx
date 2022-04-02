@@ -36,7 +36,9 @@ const NavBar = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    navigate('/home');
+    if (pathname === '/') {
+      navigate('/home');
+    }
   }, []);
 
   useEffect(() => {

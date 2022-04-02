@@ -66,7 +66,7 @@ const Results = styled(Typography)({
   fontStyle: 'normal',
   fontSize: '16px',
   lineHeight: '150%',
-  marginBottom: '10px',
+  marginBottom: '14px',
 });
 
 const Line = styled('hr')({
@@ -89,7 +89,7 @@ const ResultRow = styled('div')({
   color: color.white,
   display: 'flex',
   alignItems: 'end',
-  marginTop: '14px',
+  marginTop: '10px',
   marginBottom: '-2px',
 });
 
@@ -97,7 +97,7 @@ const ButtonContainer = styled('div')({
   left: '0px',
   transform: 'unset',
   bottom: '44px',
-  padding: '40px 20px',
+  padding: '42px 20px',
   position: 'fixed',
   width: '90%',
   background: 'linear-gradient(180deg, rgba(24, 24, 24, 0) 0%, #181818 34.61%)',

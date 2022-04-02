@@ -56,7 +56,7 @@ const ProfileList = ({ hasNextPage, count, data, getMore }: IProfileList) => {
               itemData={itemData}
               itemKey={itemKey}
               itemCount={itemCount}
-              itemSize={60}
+              itemSize={61}
               onItemsRendered={onItemsRendered}
               ref={ref}
               className="loader"

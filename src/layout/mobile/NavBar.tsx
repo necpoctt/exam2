@@ -17,7 +17,7 @@ const Container = styled(Paper)({
 const BoxContainer = styled(Box)({
   width: '100%',
   display: 'flex',
-  height: 66,
+  height: 64,
   boxShadow: 'inset 0px 0.5px 0px rgba(0, 0, 0, 0.8)',
   backgroundColor: 'rgba(24, 24, 24, 0.2)',
 });

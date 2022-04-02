@@ -31,14 +31,15 @@ const FollowButton = styled(Button)({
   height: 28,
   flex: '0 0 60px',
   textAlign: 'right',
-  marginRight: 16,
+  marginRight: 12,
+  minWidth: 60,
 });
 
 const FollowingButton = styled(Button)({
   height: 28,
   flex: '0 0 76px',
   textAlign: 'right',
-  marginRight: 16,
+  marginRight: 12,
 });
 
 const ImgContainer = styled('div')({
@@ -47,7 +48,7 @@ const ImgContainer = styled('div')({
   width: 40,
   height: 40,
   marginRight: 15,
-  marginLeft: 10,
+  marginLeft: 15,
   '& > img': {
     width: '100%',
     height: '100%',

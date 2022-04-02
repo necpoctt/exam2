@@ -6,11 +6,12 @@ import color from '../../../common/color';
 const HeadPaper = styled(Paper)({
   backgroundColor: 'rgba(255,255,255,0.06)',
   color: color.white,
+  borderRadius: '10px',
   height: 122,
   width: 130,
   display: 'flex',
   alignItems: 'end',
-  padding: '14px 15px 14px 10px',
+  padding: '14px 12px 14px 10px',
   marginBottom: 10,
 });
 

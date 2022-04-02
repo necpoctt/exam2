@@ -56,7 +56,7 @@ const ResultList = ({ hasNextPage, count, data, getMore }: IResultList) => {
               itemData={itemData}
               itemKey={itemKey}
               itemCount={itemCount}
-              itemSize={300}
+              itemSize={321}
               onItemsRendered={onItemsRendered}
               ref={ref}
               className="loader"

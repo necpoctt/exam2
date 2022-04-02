@@ -6,7 +6,7 @@ import Loading from '../../../shared/Loading';
 
 const ImgItem = styled('div')({
   '& > img': {
-    marginBottom: 12,
+    marginBottom: 21,
   },
   '&  > p': {
     fontFamily: 'Ubuntu',

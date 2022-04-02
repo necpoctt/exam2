@@ -9,7 +9,7 @@ import ResultList from './component/ResultList';
 import color from '../../common/color';
 
 const Container = styled('div')({
-  padding: '92px 114px 64px 213px',
+  padding: '96px 118px 64px 210px',
   flex: '1 1 0%',
   '& > h5': {
     color: color.white,
@@ -22,7 +22,7 @@ const Search = styled(Typography)({
   fontStyle: 'normal',
   fontSize: '30px',
   lineHeight: '150%',
-  marginBottom: '20px',
+  marginBottom: '22px',
   position: 'relative',
   right: '44px',
   cursor: 'pointer',

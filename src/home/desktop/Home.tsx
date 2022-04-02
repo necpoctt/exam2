@@ -35,7 +35,7 @@ const marks = [
 ];
 
 const Container = styled('div')({
-  padding: '64px 132px 64px 213px',
+  padding: '61px 138px 64px 211px',
   flex: '1 1 0%',
   '& > h5,& > h3, & > h6': {
     color: color.white,
@@ -58,12 +58,12 @@ const Search = styled(Typography)({
 });
 
 const Results = styled(Typography)({
-  marginLeft: '10px',
+  marginLeft: '8px',
   fontFamily: 'Ubuntu',
   fontStyle: 'normal',
   fontSize: '16px',
   lineHeight: '150%',
-  marginBottom: '10px',
+  marginBottom: '16px',
 });
 
 const ResultRow = styled('div')({
