@@ -57,7 +57,7 @@ const tabs = [
 ];
 
 const Profile = () => {
-  const [data, setData] = useState<IuserData[]>([]);
+  const [users, setUsers] = useState<IuserData[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const [page, setPage] = useState(1);
@@ -79,7 +79,7 @@ const Profile = () => {
       } else {
         res = await UserService.gerUserAllList({ page, pageSize });
       }
-      setData(res.data);
+      setUsers(res.data);
       setIsLoading(false);
       setHasNextPage(res.data.length === pageSize);
     };
@@ -97,7 +97,7 @@ const Profile = () => {
       } else {
         res = await UserService.gerUserAllList({ page: newPage, pageSize });
       }
-      setData([...data, ...res.data]);
+      setUsers([...users, ...res.data]);
       setHasNextPage(res.data.length === pageSize);
     };
     getMoreData();
@@ -115,10 +115,9 @@ const Profile = () => {
         {isLoading ? (
           <Loading />
         ) : (
-          data.length > 0 && (
+          users.length > 0 && (
             <ProfileList
-              count={data.length}
-              data={data}
+              data={users}
               getMore={getMore}
               hasNextPage={hasNextPage}
             />

@@ -39,7 +39,7 @@ const ResultItem = ({ data, columnIndex, rowIndex, style }: IResultList) => {
 
   const dataIndex = columnIndex + rowIndex * 3;
 
-  const rowData = data[dataIndex];
+  const userData = data[dataIndex];
 
   const handleImageLoaded = () => {
     setIsLoading(false);
@@ -52,7 +52,7 @@ const ResultItem = ({ data, columnIndex, rowIndex, style }: IResultList) => {
 
   return (
     <>
-      {isLoading && rowData && (
+      {isLoading && (
         <Skeleton
           style={{ ...newStyle, height: newStyle.height - 82 }}
           animation="wave"
@@ -68,17 +68,17 @@ const ResultItem = ({ data, columnIndex, rowIndex, style }: IResultList) => {
         />
       )}
 
-      {rowData && (
+      {userData && (
         <ImgItem style={newStyle}>
           <img
-            src={rowData?.avater}
-            alt={rowData.name}
+            src={userData?.avater}
+            alt={userData?.name}
             onLoad={handleImageLoaded}
             width={219}
             height={146}
           />
-          <p>{rowData.name}</p>
-          <span>{rowData.username}</span>
+          <p>{userData?.name}</p>
+          <span>{userData?.username}</span>
         </ImgItem>
       )}
     </>

@@ -42,14 +42,14 @@ const BottomButton = styled(Button)({
 });
 
 const Result = () => {
-  const [data, setData] = useState<IuserData[]>([]);
+  const [users, setUsers] = useState<IuserData[]>([]);
   const { keyword = '', page = 1, pageSize = 10 } = useParams();
   const navigate = useNavigate();
 
   useEffect(() => {
     const getData = async () => {
       const res = await UserService.gerUserAllList({ keyword, page, pageSize });
-      setData([...data, ...res.data]);
+      setUsers([...users, ...res.data]);
     };
     getData();
   }, [page]);
@@ -78,11 +78,11 @@ const Result = () => {
       </Search>
       <div
         style={{
-          height: data.length > 0 ? 'calc(100vh - 260px)' : 0,
-          width: data.length > 0 ? '740px' : 0,
+          height: users.length > 0 ? 'calc(100vh - 260px)' : 0,
+          width: users.length > 0 ? '740px' : 0,
         }}
       >
-        {data.length > 0 && <ResultList count={data.length} data={data} />}
+        {users.length > 0 && <ResultList data={users} />}
       </div>
       <ButtonContainer>
         <BottomButton onClick={() => getMore()}>MORE</BottomButton>

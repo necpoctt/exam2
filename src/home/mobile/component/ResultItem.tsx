@@ -48,7 +48,7 @@ const ResultItem = ({ data, index, style }: IResultItem) => {
     setIsLoading(false);
   };
 
-  const rowData = list[index];
+  const userData = list[index];
 
   if (!isItemLoaded(index)) {
     return (
@@ -78,14 +78,14 @@ const ResultItem = ({ data, index, style }: IResultItem) => {
 
       <ImgItem style={style}>
         <img
-          src={rowData.avater}
-          alt={rowData.name}
+          src={userData?.avater}
+          alt={userData?.name}
           onLoad={handleImageLoaded}
           width={335}
           height={223}
         />
-        <p>{rowData.name}</p>
-        <span>{rowData.username}</span>
+        <p>{userData?.name}</p>
+        <span>{userData?.username}</span>
       </ImgItem>
     </>
   );

@@ -15,14 +15,13 @@ interface IResultList {
   getMore: Function;
   data: IuserData[];
   hasNextPage: boolean;
-  count: number;
 }
 
-const ResultList = ({ hasNextPage, count, data, getMore }: IResultList) => {
+const ResultList = ({ hasNextPage, data, getMore }: IResultList) => {
   const [isLazyLoad, setIsLazyLoad] = useState(false);
 
-  const isItemLoaded = (index: number) => !hasNextPage || index < count;
-  const itemCount = hasNextPage ? count + 1 : count;
+  const isItemLoaded = (index: number) => !hasNextPage || index < data.length;
+  const itemCount = hasNextPage ? data.length + 1 : data.length;
 
   const handleScroll = async () => {
     setIsLazyLoad(true);

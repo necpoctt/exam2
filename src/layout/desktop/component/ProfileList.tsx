@@ -13,16 +13,15 @@ const getItemData = memoizeOne((data, isItemLoaded) => ({
 
 interface IProfileList {
   hasNextPage: boolean;
-  count: number;
   data: IuserData[];
   getMore: Function;
 }
 
-const ProfileList = ({ hasNextPage, count, data, getMore }: IProfileList) => {
+const ProfileList = ({ hasNextPage, data, getMore }: IProfileList) => {
   const [isLazyLoad, setIsLazyLoad] = useState(false);
 
-  const isItemLoaded = (index: number) => !hasNextPage || index < count;
-  const itemCount = hasNextPage ? count + 1 : count;
+  const isItemLoaded = (index: number) => !hasNextPage || index < data.length;
+  const itemCount = hasNextPage ? data.length + 1 : data.length;
 
   const handleScroll = async () => {
     setIsLazyLoad(true);

@@ -4,7 +4,6 @@ import ResultItem from './ResultItem';
 
 interface IResultList {
   data: IuserData[];
-  count: number;
 }
 
 interface IitemKey {
@@ -12,7 +11,8 @@ interface IitemKey {
   rowIndex: number;
 }
 
-const ResultList = ({ count, data }: IResultList) => {
+const ResultList = ({ data }: IResultList) => {
+  const count = data.length;
   const itemKey = ({ columnIndex, rowIndex }: IitemKey) => {
     const item = data[rowIndex];
     return `${item.id}-${columnIndex}`;

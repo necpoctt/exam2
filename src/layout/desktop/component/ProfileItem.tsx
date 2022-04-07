@@ -82,7 +82,7 @@ interface IProfileItem {
 const ProfileItem = ({ data, index, style }: IProfileItem) => {
   const { data: list, isItemLoaded } = data;
 
-  const rowData = list[index];
+  const userData = list[index];
 
   if (!isItemLoaded(index)) {
     return (
@@ -95,14 +95,14 @@ const ProfileItem = ({ data, index, style }: IProfileItem) => {
   return (
     <RowContainer style={style}>
       <ImgContainer>
-        <img alt={rowData?.name} src={rowData?.avater} />
+        <img alt={userData?.name} src={userData?.avater} />
       </ImgContainer>
       <NameContainer>
-        <Name variant="h6">{rowData?.name}</Name>
-        <UserName>{rowData?.username}</UserName>
+        <Name variant="h6">{userData?.name}</Name>
+        <UserName>{userData?.username}</UserName>
       </NameContainer>
 
-      {rowData?.isFollowing ? (
+      {userData?.isFollowing ? (
         <FollowingButton variant="contained">Following</FollowingButton>
       ) : (
         <FollowButton variant="outlined">Follow</FollowButton>

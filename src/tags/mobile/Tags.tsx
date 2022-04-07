@@ -55,7 +55,7 @@ const Title = styled(Typography)({
 const Tags = () => {
   const [isLoading, setIsLoading] = useState<Boolean>(false);
 
-  const [data, setData] = useState<ItagData[]>([]);
+  const [tags, setTags] = useState<ItagData[]>([]);
 
   const navigate = useNavigate();
 
@@ -64,7 +64,7 @@ const Tags = () => {
       setIsLoading(true);
       const res = await TagService.gerTags();
       setIsLoading(false);
-      setData(res);
+      setTags(res);
     };
     getData();
   }, []);
@@ -87,7 +87,7 @@ const Tags = () => {
         <TagsItem isLoading />
       ) : (
         <List>
-          {data.map((d: ItagData) => (
+          {tags.map((d: ItagData) => (
             <TagsItem key={d.id} data={d} />
           ))}
         </List>

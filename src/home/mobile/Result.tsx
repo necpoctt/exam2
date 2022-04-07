@@ -47,7 +47,7 @@ const Title = styled(Typography)({
 });
 
 const Result = () => {
-  const [data, setData] = useState<IuserData[]>([]);
+  const [users, setUsers] = useState<IuserData[]>([]);
   const [hasNextPage, setHasNextPage] = useState<boolean>(false);
 
   const { keyword = '', page = 1, pageSize = 10 } = useParams();
@@ -57,7 +57,7 @@ const Result = () => {
     const getData = async () => {
       const res = await UserService.gerUserAllList({ keyword, page, pageSize });
       setHasNextPage(res.data.length === Number(pageSize));
-      setData([...data, ...res.data]);
+      setUsers([...users, ...res.data]);
     };
     getData();
   }, [page]);
@@ -93,10 +93,9 @@ const Result = () => {
           width: '100%',
         }}
       >
-        {data.length > 0 && (
+        {users.length > 0 && (
           <ResultList
-            count={data.length}
-            data={data}
+            data={users}
             getMore={getMore}
             hasNextPage={hasNextPage}
           />
