@@ -1,7 +1,14 @@
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Route, Routes } from 'react-router-dom';
-import { Suspense, lazy } from 'react';
-import Profile from '../layout/desktop/Profile';
+import { lazy } from 'react';
+import WaitingComponent from '../common/utils';
+
+const DesktopProfile = lazy(
+  () =>
+    import(
+      /* webpackPrefetch: true */ /* webpackChunkName: "DesktopProfile" */ '../layout/desktop/Profile'
+    ),
+);
 
 const DesktopHome = lazy(
   () =>
@@ -31,12 +38,6 @@ const MobileResult = lazy(
     ),
 );
 
-const WaitingComponent = (Component: any) => (
-  <Suspense fallback={<div>loading</div>}>
-    <Component />
-  </Suspense>
-);
-
 const Index = () => {
   const isDesktop = useMediaQuery('(min-width:900px)', { noSsr: true });
   const isMinWidth1440 = useMediaQuery('(min-width:1440px)', { noSsr: true });
@@ -57,7 +58,7 @@ const Index = () => {
           element={WaitingComponent(isDesktop ? DesktopResult : MobileResult)}
         />
       </Routes>
-      {isMinWidth1440 && <Profile />}
+      {isMinWidth1440 && <DesktopProfile />}
     </div>
   );
 };

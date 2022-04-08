@@ -1,9 +1,10 @@
-import { Suspense, lazy } from 'react';
+import { lazy } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 import DesktopNavBar from './layout/desktop/NavBar';
 import MobileInitContainer from './layout/mobile/InitContainer';
+import WaitingComponent from './common/utils';
 
 const Home = lazy(
   () =>
@@ -13,12 +14,6 @@ const Home = lazy(
 const Tags = lazy(
   () =>
     import(/* webpackPrefetch: true */ /* webpackChunkName: "Tags" */ './tags'),
-);
-
-const WaitingComponent = (Component: any) => (
-  <Suspense fallback={<div>loading</div>}>
-    <Component />
-  </Suspense>
 );
 
 const App = () => {
