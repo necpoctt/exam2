@@ -1,4 +1,4 @@
-React MUI UI RWD demo
+React MUI RWD demo
 
 https://exam2-demo.herokuapp.com/
 
