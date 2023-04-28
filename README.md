@@ -1,6 +1,6 @@
 React MUI RWD demo
 
-https://exam2-demo.herokuapp.com/
+https://necpoctt.000webhostapp.com/
 
 node >16
 
