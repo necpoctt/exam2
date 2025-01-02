@@ -1,6 +1,4 @@
-React MUI RWD demo
-
-https://necpoctt.000webhostapp.com/
+React MUI RWD 
 
 node >16
 
